@@ -1,0 +1,81 @@
+baseURL: http://uran0sH.github.io/
+languageCode: en-us
+defaultContentLanguage: zh
+title: Bosco
+theme: PaperMod
+
+hasCJKLanguage: true
+enableInlineShortcodes: true
+enableEmoji: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  # defaultTheme: light
+# defaultTheme: dark
+  defaultTheme: auto # to switch between dark or light according to browser theme
+  # ShowToc: true
+  TocOpen: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  DateFormat: "January 2, 2006"
+
+  assets:
+    disableHLJS: true
+
+  label:
+    text: "Home"
+
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog. I am interested in the computer system, including the operating system, compiler and so on.
+
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/uran0sH"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/wenyu-huang-298b31262/"
+
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10 
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: resume
+      name: Resume
+      url: "/resume.pdf"
+      weight: 30
+
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: gruvbox
