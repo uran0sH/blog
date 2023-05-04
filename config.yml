@@ -55,6 +55,10 @@ params:
     - name: "linkedin"
       url: "https://www.linkedin.com/in/wenyu-huang-298b31262/"
 
+taxonomies:
+  category: categories
+  tag: tags
+
 menu:
   main:
     - identifier: categories
