@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: http://uran0sH.github.io/sitemap.xml
