@@ -11,6 +11,7 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+defaultContentLanguageInSubdir: false
 
 outputs:
   home:
@@ -25,7 +26,7 @@ params:
   defaultTheme: auto # to switch between dark or light according to browser theme
   # ShowToc: true
   TocOpen: true
-  ShowReadingTime: true
+  ShowReadingTime: false
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
