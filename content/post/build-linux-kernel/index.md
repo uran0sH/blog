@@ -1,5 +1,5 @@
 ---
-title: "编译和使用 Qemu 运行 Linux Kernel "
+title: "搭建 Linux Kernel 开发环境"
 date: 2023-10-03T15:45:05+08:00
 draft: false
 categories: ["the Operating System"]
@@ -7,6 +7,8 @@ tags: ["os", "linux", "kernel", "c"]
 ---
 
 第一步先进行源码拉取，这里使用的是一个特别版本：https://github.com/runninglinuxkernel/runninglinuxkernel_5.0.git
+
+我们还需要下载 ARM 编译工具链：https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads (我使用的是[10.3](https://developer.arm.com/downloads/-/gnu-a)的版本)
 
 # 编译 Kernel
 `run_rlk_arm64.sh` 这段脚本中提供了下面这几行代码来编译 kernel:
@@ -112,3 +114,21 @@ run_qemu_debian(){
 
 }
 ```
+
+# 调试内核
+我们使用 gdb 加 qemu 来调试内核
+
+**step1**. 先启动 qemu 的 debug 模式，就是加上 `-S -s` 选项：
+1. `-S` 表示 QEMU 虚拟机会冻结 CPU，直到远程的 GDB 输入相应的控制命令
+2. `-s` 表示在1234端口接收GDB的调试链接
+
+**step2**. 使用 `aarch64-none-linux-gnu-gdb --tui vmlinux` 来启动 GDB
+
+**step3** 进入 GDB 后输入 `target remote localhost:1234` 建立远程链接
+
+**step4** `b start_kernel` 在 `start_kernel` 处设置断点
+
+**step5** `c` 继续执行
+
+执行完的效果如下图：
+![gdb-result](./gdb-result.png)
