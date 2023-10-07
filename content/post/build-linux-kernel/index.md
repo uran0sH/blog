@@ -2,7 +2,7 @@
 title: "搭建 Linux Kernel 开发环境"
 date: 2023-10-03T15:45:05+08:00
 draft: false
-categories: ["the Operating System"]
+categories: ["The Operating System"]
 tags: ["os", "linux", "kernel", "c"]
 ---
 
