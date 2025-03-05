@@ -58,7 +58,7 @@ url = "https://github.com/uran0sh"
 # Main menu pages
 [[params.menu]]
 name = "home"
-url = "/"
+url = "/blog"
 
 [[params.menu]]
 name = "posts"
