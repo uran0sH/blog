@@ -62,15 +62,15 @@ url = "/blog"
 
 [[params.menu]]
 name = "posts"
-url = "/post"
+url = "/blog/post"
 
 [[params.menu]]
 name = "about"
-url = "/about"
+url = "/blog/about"
 
 [[params.menu]]
 name = "resume"
-url = "/resume.pdf"
+url = "/blog/resume.pdf"
 
 # [[params.menu]]
 # name = "library"
