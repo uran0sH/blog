@@ -2,7 +2,7 @@ baseURL: http://uran0sH.github.io/
 languageCode: en-us
 defaultContentLanguage: zh
 title: Bosco
-theme: PaperMod
+theme: typo
 
 hasCJKLanguage: true
 enableInlineShortcodes: true
